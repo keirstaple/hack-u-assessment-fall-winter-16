@@ -9,7 +9,11 @@ exports.arraysAnswers = {
   },
 
   sum: function(arr) {
-
+    var sum = 0
+    for(i=0; i < arr.length; i++) {
+      var sum = sum + arr[i];
+    }
+    return sum;
   },
 
   remove: function(arr, item) {
