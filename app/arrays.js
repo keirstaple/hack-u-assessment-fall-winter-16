@@ -2,7 +2,10 @@ exports = typeof window === 'undefined' ? global : window;
 
 exports.arraysAnswers = {
   indexOf: function(arr, item) {
-
+    for(i=0; i < arr.length; i++){
+      var location = arr.indexOf(item);
+    }
+    return location;
   },
 
   sum: function(arr) {
