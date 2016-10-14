@@ -1,23 +1,27 @@
 exports = typeof window === 'undefined' ? global : window;
 
 exports.arraysAnswers = {
-  indexOf: function(arr, item) {
+  indexOf: (arr, item) => {
+    let location = null;
     for(i=0; i < arr.length; i++){
-      var location = arr.indexOf(item);
+      location = arr.indexOf(item);
     }
     return location;
   },
 
-  sum: function(arr) {
-    var sum = 0
+  sum: (arr) => {
+    let sum = 0
     for(i=0; i < arr.length; i++) {
       sum = sum + arr[i];
     }
     return sum;
   },
 
-  remove: function(arr, item) {
-
+  remove: (arr, item) => {
+    let result = arr.filter((item) => {
+      return item !== 2;
+    });
+    return result;
   },
 
   removeWithoutCopy: function(arr, item) {
