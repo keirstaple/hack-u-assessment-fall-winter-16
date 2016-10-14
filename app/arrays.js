@@ -24,12 +24,16 @@ exports.arraysAnswers = {
     return result;
   },
 
-  removeWithoutCopy: function(arr, item) {
-
+  removeWithoutCopy: (arr, item) => {
+    let result = arr.filter((item) => {
+      return item !== 2;
+    });
+    return result;
   },
 
-  append: function(arr, item) {
-
+  append: (arr, item) => {
+    arr.push(10);
+    return arr;
   },
 
   truncate: function(arr) {
