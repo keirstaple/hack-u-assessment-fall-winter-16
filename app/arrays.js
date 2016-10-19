@@ -18,9 +18,7 @@ exports.arraysAnswers = {
   },
 
   remove: (arr, item) => {
-    let result = arr.filter((item) => {
-      return item !== 2;
-    });
+    let result = arr.filter(item => item !== 2);
     return result;
   },
 
@@ -57,7 +55,8 @@ exports.arraysAnswers = {
   },
 
   insert: function(arr, item, index) {
-
+    arr.splice(2, 0, 'z');
+    return arr;
   },
 
   count: function(arr, item) {
