@@ -18,14 +18,12 @@ exports.arraysAnswers = {
   },
 
   remove: (arr, item) => {
-    let result = arr.filter(item => item !== 2);
+    let result = arr.filter( item => item !== 2 );
     return result;
   },
 
   removeWithoutCopy: (arr, item) => {
-    let result = arr.filter((item) => {
-      return item !== 2;
-    });
+    let result = arr.filter( item => item !== 2 );
     return result;
   },
 
