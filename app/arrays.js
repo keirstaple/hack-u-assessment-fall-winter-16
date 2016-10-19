@@ -58,12 +58,18 @@ exports.arraysAnswers = {
   },
 
   count: function(arr, item) {
-    var count = arr.reduce((n, val) => n + (val === item), 0);
+    let count = arr.reduce((n, val) => n + (val === item), 0);
     return count;
   },
 
   duplicates: function(arr) {
-
+    let duplicates = arr.reduce((list, item, index, array) => {
+      if (array.indexOf(item, index + 1) !== -1 && list.indexOf(item) === -1) {
+        list.push(item);
+      }
+      return list;
+    }, []);
+    return duplicates;
   },
 
   square: function(arr) {
