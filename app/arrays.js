@@ -60,9 +60,7 @@ exports.arraysAnswers = {
   },
 
   count: function(arr, item) {
-    var count = arr.reduce(function(n, val) {
-      return n + (val === item);
-    }, 0);
+    var count = arr.reduce((n, val) => n + (val === item), 0);
     return count;
   },
 
