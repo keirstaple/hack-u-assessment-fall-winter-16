@@ -2,11 +2,15 @@ exports = typeof window === 'undefined' ? global : window;
 
 exports.functionsAnswers = {
   argsAsArray: function(fn, arr) {
-    return fn.apply(fn, arr);
+    return fn(...arr);
   },
 
   speak: function(fn, obj) {
+    console.log(fn);
+    console.log(obj);
 
+
+    return fn(obj);
   },
 
   functionFunction: function(str) {
